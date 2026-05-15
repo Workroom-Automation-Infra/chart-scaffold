@@ -70,7 +70,7 @@ spec:
           {{- end }}
           {{- range $k, $v := .Values.env }}
           - name: {{ $k }}
-            value: "{{ $v | quote }}"
+            value: "{{ $v }}"
           {{- end }}
           ports:
           {{- if .Values.service.port }}
